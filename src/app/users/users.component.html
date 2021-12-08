@@ -1,0 +1,28 @@
+<div class="content" fxLayout="row" fxLayout.xs="row">
+    <div fxFlex="60" class="sec1" fxFlex.xs="60">
+        Email
+    </div>
+    <div fxFlex="40" class="sec2" fxFlex.xs="40">
+        Age
+    </div>
+</div>
+<div class="content" fxLayout="row" fxLayout.xs="row" fxLayoutGap *ngFor="let user of users">
+    <div fxFlex="60" class="sec1" fxFlex.xs="60">
+        {{user.email}}
+    </div>
+    <div fxFlex="40" class="sec2" fxFlex.xs="40">
+        {{user.age}}
+    </div>
+</div>
+
+<div class="content" fxLayout="row" fxLayout.xs="row" fxLayoutGap>
+    <div fxFlex="40" class="sec1" fxFlex.xs="60">
+        Youngest user: {{youngestUser?.email}}
+    </div>
+    <div fxFlex="40" class="sec2" fxFlex.xs="40">
+        Oldest user: {{oldestUser?.email}}
+    </div>
+    <div fxFlex="20" class="sec2" fxFlex.xs="40">
+        Average age: {{averageAge}}
+    </div>
+</div>
